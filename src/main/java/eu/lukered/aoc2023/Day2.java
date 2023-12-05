@@ -2,7 +2,6 @@ package eu.lukered.aoc2023;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Day2 {
@@ -38,7 +37,7 @@ public class Day2 {
         return input.stream().map(i -> {
             final String[] split = i.substring(5).split(": ");
             return new DiceGame(Integer.parseInt(split[0]), Arrays.stream(split[1].split(";"))
-                    .map(s -> new GameResult(redPattern.get(s), greenPattern.get(s), bluePattern.get(s)))
+                    .map(s -> new GameResult(redPattern.getInt(s), greenPattern.getInt(s), bluePattern.getInt(s)))
                     .toList());
         }).toList();
     }
@@ -56,16 +55,6 @@ public class Day2 {
         public boolean isValid(final DiceGame diceGame) {
             return diceGame.results.stream()
                     .allMatch(r -> r.red <= maxRed && r.green <= maxGreen && r.blue <= maxBlue);
-        }
-    }
-
-    private record GroupMatcher(Pattern pattern, int group) {
-        public int get(final String input) {
-            final Matcher matcher = pattern.matcher(input);
-            if (matcher.find()) {
-                return Integer.parseInt(matcher.group(group));
-            }
-            return 0;
         }
     }
 
