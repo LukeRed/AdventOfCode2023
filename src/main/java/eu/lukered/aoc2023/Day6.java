@@ -11,8 +11,8 @@ public class Day6 {
 
     public static void main(String[] args) {
         final Day6 day6 = new Day6();
-        day6.step(1, parseGames(Util.DAY6_INPUT));
-        day6.step(2, parseBigGames(Util.DAY6_INPUT));
+        day6.step(1, parseGames(Input.DAY6_INPUT));
+        day6.step(2, parseBigGames(Input.DAY6_INPUT));
     }
 
     private void step(final int step, final List<Game> games) {

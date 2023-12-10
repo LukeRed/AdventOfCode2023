@@ -11,7 +11,7 @@ public class Day2 {
 
     public static void main(String[] args) {
         final Day2 day2 = new Day2();
-        final List<DiceGame> parsedInput = parseInput(Util.DAY2_INPUT);
+        final List<DiceGame> parsedInput = parseInput(Input.DAY2_INPUT);
         day2.step1(parsedInput);
         day2.step2(parsedInput);
     }

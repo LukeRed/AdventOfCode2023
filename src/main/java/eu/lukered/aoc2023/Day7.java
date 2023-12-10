@@ -11,7 +11,7 @@ public class Day7 {
 
     public static void main(String[] args) {
         final Day7 day7 = new Day7();
-        final List<Hand> list = Util.DAY7_INPUT.stream().map(s -> {
+        final List<Hand> list = Input.DAY7_INPUT.stream().map(s -> {
                     String[] split = s.split(" ");
                     return new Hand(split[0], Integer.parseInt(split[1]));
                 }).toList();

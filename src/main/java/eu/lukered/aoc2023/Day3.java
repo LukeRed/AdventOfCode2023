@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
 public class Day3 {
     public static void main(String[] args) {
         final Day3 day3 = new Day3();
-        final Grid grid = new Grid(Util.DAY3_INPUT);
+        final Grid grid = new Grid(Input.DAY3_INPUT);
         day3.step1(grid);
         day3.step2(grid);
     }

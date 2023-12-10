@@ -10,7 +10,7 @@ import java.util.stream.IntStream;
 public class Day4 {
     public static void main(String[] args) {
         final Day4 day4 = new Day4();
-        final List<ScratchCard> scratchCards = Util.DAY4_INPUT.stream().map(ScratchCard::of).toList();
+        final List<ScratchCard> scratchCards = Input.DAY4_INPUT.stream().map(ScratchCard::of).toList();
         day4.step1(scratchCards);
         day4.step2(scratchCards);
     }

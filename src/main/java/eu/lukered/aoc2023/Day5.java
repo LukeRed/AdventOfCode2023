@@ -24,8 +24,8 @@ public class Day5 {
 
     public static void main(String[] args) {
         final Day5 day5 = new Day5();
-        day5.step1(Util.DAY5_INPUT);
-        day5.step2(Util.DAY5_INPUT);
+        day5.step1(Input.DAY5_INPUT);
+        day5.step2(Input.DAY5_INPUT);
     }
 
     private void step1(final List<String> input) {

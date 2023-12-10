@@ -9,7 +9,7 @@ public class Day1 {
     public static final Map<String, String> digitReplacement = Map.of("one", "1", "two", "2", "three", "3", "four", "4", "five", "5", "six", "6", "seven", "7", "eight", "8", "nine", "9");
     public static final Pattern filterRegex = Pattern.compile("(?=(one|two|three|four|five|six|seven|eight|nine|\\d))");
     public static void main(String[] args) {
-        final var sum = Util.DAY1_INPUT
+        final var sum = Input.DAY1_INPUT
                 .stream()
                 .map(Day1::replaceWithRegex)
                 .map(s -> String.format("%s%s", s.charAt(0), s.charAt(s.length() - 1)))
